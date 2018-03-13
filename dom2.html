@@ -1,0 +1,80 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+#onetext{
+	border-style:dotted; /*设置边框*/
+	color:red;/*边框颜色*/
+	margin-bottom: 30px;/*外填充像素*/
+	width:500px;height:300px;/*盒模型大小*/
+	position:absolute;/*盒模型定位*/
+	left:0;/*定位左长度*/
+	top:0;/*定位上长度*/
+}
+#onetext h1{
+	/*position:absolute;
+	left:0;
+	top:0;*/
+	text-align:center;
+}
+#onetext p{
+	border-width:2px;
+    border-style:solid;
+    border-color:red;
+	padding:20px;
+	position:relative;
+	bottom:0;
+	left:0;
+}
+#twotext{
+	border-width:2px;
+	border-style:dashed;
+	border-color:pink;
+	width:200px;height:200px;
+	margin-bottom:30px;
+	margin-top:50px;
+	padding:100px 100px;
+	position:relative;
+	top:400px;
+	left:200px;
+	
+}
+#box2{
+	width:200px;
+	height:200px;
+	padding:30px;
+	border:2px solid green;
+	position:fixed;
+	bottom:0;
+	right:0;
+	
+}
+/*1、border-style（边框样式）常见样式有：
+dashed（虚线）| dotted（点线）| solid（实线）。
+2、border-color（边框颜色）中的颜色可设置为十六进制颜色，如:
+border-color:#888;//前面的井号不要忘掉。
+3、border-width（边框宽度）中的宽度也可以设置为：
+thin | medium | thick（但不是很常用），最常还是用象素（px）。
+4、设置单独边框代码: border-bottom,border-top,border-left,border-right
+5、内边界代码:padding-top,bottom,left,right。外边界代码:margin-top,bottom,left,right。
+6、块状元素浮动:float:right left top bottom。
+7、绝对定位:position:absolute(表示绝对定位),relative（表示相对定位）,fixed(表示固定定位)
+8、中文网页常用代码body{ font:12px/1.5em  "宋体",sans-serif;}*/
+</style>
+</head>
+<body>
+<div id="onetext">
+<h1>这是一个标题</h1>
+<p>
+这是主要内容，一段文字
+</p>
+</div>
+<div  id="twotext">
+盒子1
+</div>
+<div id="box2">
+盒子2
+</div>
+</body>
+
+</html>

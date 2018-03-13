@@ -1,0 +1,148 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<title>这个是标题</title>
+		<meta charset="UTF-8">
+		<meta http-equiv="Content-Type">
+		<style type="text/css">/*CSS设置*/
+		body{font-family:"microsoft Yahei";}/*font-family设置字体*/
+		
+		.onelabel>ul{
+			color:pink;
+			font-weight:bold;/*设置文字粗细，bold为粗体*/
+			font-style:italic;/*设置文字风格，italic为斜体*/
+			text-decoration:underline;!important/*设置下划线*/
+			text-decoration:line-through;/*删除线*/
+		}
+		
+		.onelabel span{
+			color:blue;
+		}
+		
+		a:hover{
+			color:yellow;
+			font-size:30px;/*设置字体大小,单位为px*/
+		}
+		
+		p{
+			line-height:1.5em;/*设置行间距*/
+			letter-spacing:10px;/*文字间隔*/
+			text-align:left;/*文字居左,居中center,居右right*/
+			text-indent:2em;/*首行缩进*/
+		}
+		a{
+    display:inline-block;
+	width:20px;/*在默认情况下宽度不起作用*/
+	height:20px;/*在默认情况下高度不起作用*/
+	background:pink;/*设置背景颜色为粉色*/
+	text-align:center; /*设置文本居中显示*/
+}
+<!--在CSS中，class类前面加点，id前面加#-->
+<!--class可以使用多次，id只能用一次-->
+<!--在CSS中使用第一代子元素的代码是>号，比如#twoplate>span{}-->
+<!--在CSS中包含后代子元素的代码是空格，比如.twoplate span-->
+<!--在CSS中，*为通用选择器，会应用到所有-->
+<!--hover标签，为伪类选择器，常用的有a:hover{}-->
+<!--不同位置的显示要求为相同的属性时，可用逗号分组选择，如：
+	.onelabel,.twoplate span{}-->
+<!--css标签具有一定继承性，如颜色等-->
+<!--最高权重代码：!important-->
+		</style>
+		
+<script>
+function timeone(){
+var mydate=new data();
+var myyear=mydate.getFullYear();
+document.write(myyear);
+
+var mynum=mydate.getDay();
+
+var weekday=["星期日","星期一","星期二","星期三","星期四","星期五","星期六"];
+document.write(mydate.getDay());
+document.write("今天是："+ weekday[mynum]);
+mydate.setTime(mydate.getTime()+2*60*60*1000);
+}
+function oneway()
+{
+	var myway=new Array(5);//创建空数组 即使规定了长度，也可以把数据储存在规定长度外
+	myway[0]=20;
+	myway[1]=30;
+	document.write("数组的长度是"+ myway.length);	
+}
+
+
+
+</script>
+	</head>
+
+	<body>
+		<h1 style="color:green"><!--标题代码-->
+		第一个链接
+		</h1>
+		<p>菲茨杰拉德，二十世纪美国文学巨擘之一，兼具作家和编剧双重身份。
+		他以诗人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，
+		其诗人和梦想家的气质亦为那个奢靡年代的不二注解。
+		菲茨杰拉德，二十世纪美国文学巨擘之一，兼具作家和编剧双重身份。
+		他以诗人的敏感和戏剧家的想象为"爵士乐时代"吟唱华丽挽歌，
+		其诗人和梦想家的气质亦为那个奢靡年代的不二注解。</p>
+		
+		<hr />
+		<!--target为_blank时会从新的页面打开-->
+		<a href="http://www.baidu.com" target="_blank"><em>百度</em></a>
+		<div>
+			<p><strong>这</strong>是<span style="color:blue">一个</span>段落</p>
+		</div>
+		<div class="twoplate">
+			<address>这是第二块</address> <!-- address地址-->
+		</div>
+
+		<div class="onelabel">
+			<ul><li>第一个标签</li></ul>
+
+		<ol><li><span>第二个标签</span></li>
+			<li>第三个标签</li>
+		</ol>
+		</div> <!--第一个板块-->
+		<hr />
+		<div id="oneform">
+			<form method="post" action="save.php">
+				<label for="username">用户名:</label>
+				<input type="text"  name="username" id="username" value="" />
+				<label for="pass">密码:</label>
+				<input type="password"  name="pass" id="pass" value="" />    
+				<input type="submit" value="确定"  name="submit" />
+				<input type="reset" value="重置" name="reset" />
+		</form>
+		<form action="save.php" method="post" >
+			<label>个人简介：</label> <br />
+			<textarea cols="50" rows="10" placeholder="在这里输入内容..."></textarea><!--文本域-->
+			<input type="submit" value="确定"  name="submit" />
+			<input type="reset" value="重置"  name="reset" />
+		</form> 
+		<form action="save.php" method="post">
+			<label>单选与复选:</label>
+			<label for="onee">一</label>
+			<input type="radio" value="1" name="nbone"  id="onee"/>
+			<label for="oneee">二</label>
+			<input type = "radio" value="2" name="nbone" id="oneee"/>
+			<label>三</label>
+			<input type = "checkbox" value="3" name="nbtwo" />
+			<label>四</label>
+			<input type ="checkbox" value ="4" name="nbtwo">
+		</form>
+		<form action="save.php" method="post">
+			<label>下拉框:</label>
+			<select>
+				<option value="1">一项</option>
+				<option value="2">二项</option>
+				<option value="3">三项</option>
+				<option value="4" selected="selected">默认</option><!--select 选择 selected默认-->
+			</select>
+			<input type="email" id="email" placeholder="你的邮箱地址"><!--placherholder占位符-->
+			<input type="submit" value="我要是不呢" name="submitBtn" /><!--submit 提交-->
+			<input type="reset" value="这是重置" />
+		</form>
+		</div>
+		<div><input type="bottom" value="时间输出" onclick=timeone()></div>
+	</body>
+</html>
